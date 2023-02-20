@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { CiLocationArrow1, CiLocationOn } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
+import MyTrip from "../../views/MyTrip";
 
 export default function TripsTable(props) {
   const [trips, setTrips] = useState(props.trips);
+
+  const navigate = useNavigate();
 
   return (
     <div className="mb-20 w-rem-46 max-w-full ml-auto mr-auto">
       {trips?.map((trip, i) => (
         <div
-          className="hover border flex flex-row my-2 rounded-lg py-4 px-4 justify-between"
+          className="hover:shadow border flex flex-row my-2 rounded-lg py-4 px-4 justify-between cursor-pointer"
           id={i}
+          onClick={() => {
+            navigate(`/mytrip/${trip.trip_id}`);
+          }}
         >
           <div className="flex flex-col w-2/3">
             <div className="flex w-full">

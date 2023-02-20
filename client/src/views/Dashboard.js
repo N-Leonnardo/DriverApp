@@ -43,7 +43,6 @@ function Dashboard() {
         },
       })
       .then((res) => {
-        console.log(res.data.data);
         setTrips(res?.data.data);
       })
       .catch((err) => console.log(err));
