@@ -4,6 +4,7 @@ import Register from "./views/Register";
 import Dashboard from "./views/Dashboard";
 import NewTrip from "./views/NewTrip";
 import { Suspense, useEffect } from "react";
+import "./styles.css";
 
 export const url = "http://localhost:1337/api";
 

@@ -1,3 +1,5 @@
 import React from "react";
 
-export default function MyTrip() {}
+export default function MyTrip() {
+  return <div></div>;
+}
